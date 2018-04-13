@@ -2,8 +2,8 @@
 //  HomeViewController.swift
 //  Horrible Horoscopes
 //
-//  Created by Sawyer Clever on 4/11/18.
-//  Copyright © 2018 Sawyer Clever. All rights reserved.
+//  Created by Sawyer Clever & Tyler Crago on 4/11/18.
+//  Copyright © 2018 Sawyer Clever & Tyler Crago. All rights reserved.
 //
 
 import UIKit
@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     let sign = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio",
                 "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
+    
     let signImage: [UIImage] = [
         UIImage(named: "aries")!,
         UIImage(named: "taurus")!,

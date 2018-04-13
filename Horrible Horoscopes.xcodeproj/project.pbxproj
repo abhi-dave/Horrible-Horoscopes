@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		240C4E63207F0C54007E282A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C4E62207F0C54007E282A /* HelpViewController.swift */; };
+		24E1A5C02081238D00E3F4B0 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1A5BF2081238D00E3F4B0 /* QuestionViewController.swift */; };
+		24E1A5C22081246700E3F4B0 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1A5C12081246700E3F4B0 /* ResultViewController.swift */; };
 		24EAA9AC207E3909000115F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAA9AB207E3909000115F8 /* AppDelegate.swift */; };
 		24EAA9AE207E3909000115F8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAA9AD207E3909000115F8 /* HomeViewController.swift */; };
 		24EAA9B1207E3909000115F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24EAA9AF207E3909000115F8 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		240C4E62207F0C54007E282A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		24E1A5BF2081238D00E3F4B0 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		24E1A5C12081246700E3F4B0 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		24EAA9A8207E3909000115F8 /* Horrible Horoscopes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Horrible Horoscopes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EAA9AB207E3909000115F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24EAA9AD207E3909000115F8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -61,11 +65,13 @@
 				24EAA9AB207E3909000115F8 /* AppDelegate.swift */,
 				24EAA9AD207E3909000115F8 /* HomeViewController.swift */,
 				24EAA9AF207E3909000115F8 /* Main.storyboard */,
+				24E1A5C12081246700E3F4B0 /* ResultViewController.swift */,
 				24EAA9BD207E3DA6000115F8 /* CollectionViewCell.swift */,
 				24EAA9B2207E3909000115F8 /* Assets.xcassets */,
 				24EAA9B4207E3909000115F8 /* LaunchScreen.storyboard */,
 				24EAA9B7207E3909000115F8 /* Info.plist */,
 				240C4E62207F0C54007E282A /* HelpViewController.swift */,
+				24E1A5BF2081238D00E3F4B0 /* QuestionViewController.swift */,
 			);
 			path = "Horrible Horoscopes";
 			sourceTree = "<group>";
@@ -143,9 +149,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24EAA9AE207E3909000115F8 /* HomeViewController.swift in Sources */,
+				24E1A5C02081238D00E3F4B0 /* QuestionViewController.swift in Sources */,
 				24EAA9AC207E3909000115F8 /* AppDelegate.swift in Sources */,
 				24EAA9BE207E3DA6000115F8 /* CollectionViewCell.swift in Sources */,
 				240C4E63207F0C54007E282A /* HelpViewController.swift in Sources */,
+				24E1A5C22081246700E3F4B0 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
