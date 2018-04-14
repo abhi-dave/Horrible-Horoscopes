@@ -16,8 +16,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var selection:String?
     
     //Array that holds the names of the zodiac signs
-    let sign = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio",
-                "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
+    let sign = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     
     //Array that holds the images of the zodiac signs
     let signImage: [UIImage] = [
@@ -46,12 +45,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.didReceiveMemoryWarning()
     }
 
-    //
+    //Gets the amount of cells to display in the collection view
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sign.count
     }
     
-    //
+    //Displays the sign label and sign image for each cell counted in the previous method
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         cell.signLabel.text = sign[indexPath.item]

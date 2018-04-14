@@ -9,7 +9,18 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    
+    //Holds value of initial zodiac selection
+    var zodiacSelection:String?
+    
+    var responses = [
+        [1, 0],
+        [2, 0],
+        [3, 0],
+        [4, 0],
+        [5, 0]
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

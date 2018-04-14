@@ -151,6 +151,7 @@ class QuestionViewController: UIViewController {
                     answerBButton.setTitle(answer[2][2] as? String, for: .normal)
                     answerCButton.setTitle(answer[2][3] as? String, for: .normal)
                     answerDButton.setTitle(answer[2][4] as? String, for: .normal)
+                    responses[1][1] = response!
                     status += 1
                     response = nil
                     break;
@@ -162,6 +163,7 @@ class QuestionViewController: UIViewController {
                     answerBButton.setTitle(answer[3][2] as? String, for: .normal)
                     answerCButton.setTitle(answer[3][3] as? String, for: .normal)
                     answerDButton.setTitle(answer[3][4] as? String, for: .normal)
+                    responses[2][1] = response!
                     status += 1
                     response = nil
                     break;
@@ -173,10 +175,12 @@ class QuestionViewController: UIViewController {
                     answerBButton.setTitle(answer[4][2] as? String, for: .normal)
                     answerCButton.setTitle(answer[4][3] as? String, for: .normal)
                     answerDButton.setTitle(answer[4][4] as? String, for: .normal)
+                    responses[3][1] = response!
                     status += 1
                     response = nil
                     break;
                 case 4:
+                    responses[4][1] = response!
                     performSegue(withIdentifier: "questionToResult", sender: self)
                     break;
                 default:
@@ -185,6 +189,18 @@ class QuestionViewController: UIViewController {
         } else {
             /*********Insert Selection Alert**********/
             print("No Selection Made")
+        }
+    }
+    
+    //Sends the initial zodiac sign selection and answer selecctions to the result view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ResultViewController {
+            destination.zodiacSelection = zodiacSelection
+            destination.responses[0][1] = responses[0][1]
+            destination.responses[1][1] = responses[1][1]
+            destination.responses[2][1] = responses[2][1]
+            destination.responses[3][1] = responses[3][1]
+            destination.responses[4][1] = responses[4][1]
         }
     }
     
