@@ -22,6 +22,10 @@ class HelpViewController: UIViewController {
         //Calls upon the function to create the date picker
         createBirthdayDatePicker()
         
+        //Calls upon the function that formats the date and sets a default to today's date
+        formatView()
+        
+        //Recognizes taps outside of keyboard and displays the option while dismissing the keyboard
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tapRecognizer)
@@ -50,18 +54,23 @@ class HelpViewController: UIViewController {
     
     //Dismisses keyboard by pressing the done button or clicking outside of the keyboard
     @objc func dismissKeyboard() {
+        formatView()
+        self.view.endEditing(true)
+    }
+    
+    //Selects the date and formats the output
+    func formatView() {
         //Format the date and disinclude the time
         let format = DateFormatter()
         format.dateStyle = .medium
         format.timeStyle = .none
         let selectedDate = format.string(from: birthdayPickerView.date)
-
+        
         //Calculates zodiac sign and inserts image and label into view controller
         getZodiacSign(formatter: format)
         
         //Display the selected birthday in the text field and stop editing
         birthdayTextField.text = "\(selectedDate)"
-        self.view.endEditing(true)
     }
     
     //Calculates the user's zodiac sign from the birthday picker
@@ -72,6 +81,7 @@ class HelpViewController: UIViewController {
         formatter.dateFormat = "dd"
         let getDay = formatter.string(from: self.birthdayPickerView.date)
         
+        //Converts day and month strings to integers for conditionals
         let day:Int = Int(getDay)!
         let month:Int = Int(getMonth)!
         
