@@ -166,6 +166,9 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextPressed:" destination="f1f-Vj-yEi" eventType="touchUpInside" id="hXd-P5-0ek"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arQ-nT-tKi">
                                 <rect key="frame" x="16" y="65" width="343" height="32"/>
@@ -173,21 +176,108 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w51-m3-QBO">
+                                <rect key="frame" x="16" y="139" width="343" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="WrN-Qh-YT4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdR-SZ-UTV">
+                                <rect key="frame" x="16" y="254" width="343" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="hfa-qs-5DR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Answer A Placeholder">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectedA:" destination="f1f-Vj-yEi" eventType="touchUpInside" id="mTS-7F-yj6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pP6-P2-F1E">
+                                <rect key="frame" x="16" y="320" width="343" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="jFi-My-vTd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Answer B Placeholder">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectedB:" destination="f1f-Vj-yEi" eventType="touchUpInside" id="7Fj-be-hqO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXl-ag-M2c">
+                                <rect key="frame" x="16" y="386" width="343" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="wMX-Iz-AJh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Answer C Placeholder">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectedC:" destination="f1f-Vj-yEi" eventType="touchUpInside" id="vGV-Es-zY5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6w-iw-OJU">
+                                <rect key="frame" x="16" y="452" width="343" height="58"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Answer D Placeholder">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectedD:" destination="f1f-Vj-yEi" eventType="touchUpInside" id="J5m-EV-uUt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="w51-m3-QBO" firstAttribute="trailing" secondItem="arQ-nT-tKi" secondAttribute="trailing" id="5y8-JY-P8l"/>
                             <constraint firstItem="arQ-nT-tKi" firstAttribute="centerX" secondItem="G1T-ne-6pC" secondAttribute="centerX" id="6Rg-gM-Xok"/>
+                            <constraint firstItem="pP6-P2-F1E" firstAttribute="trailing" secondItem="NXl-ag-M2c" secondAttribute="trailing" id="ArX-gD-p1Z"/>
                             <constraint firstItem="PsC-GW-g2d" firstAttribute="bottom" secondItem="RVZ-ZH-wAl" secondAttribute="bottom" id="IGP-Nj-tvi"/>
+                            <constraint firstItem="G1T-ne-6pC" firstAttribute="top" secondItem="I6w-iw-OJU" secondAttribute="bottom" constant="74" id="K9s-uq-fwJ"/>
+                            <constraint firstItem="YdR-SZ-UTV" firstAttribute="trailing" secondItem="w51-m3-QBO" secondAttribute="trailing" id="NTt-Aa-oUK"/>
                             <constraint firstItem="PsC-GW-g2d" firstAttribute="leading" secondItem="RVZ-ZH-wAl" secondAttribute="leading" id="NYL-sz-1eE"/>
+                            <constraint firstItem="w51-m3-QBO" firstAttribute="top" secondItem="arQ-nT-tKi" secondAttribute="bottom" constant="42" id="RZ8-T4-guR"/>
+                            <constraint firstItem="NXl-ag-M2c" firstAttribute="leading" secondItem="I6w-iw-OJU" secondAttribute="leading" id="SAE-Va-Ent"/>
                             <constraint firstItem="PsC-GW-g2d" firstAttribute="top" secondItem="RVZ-ZH-wAl" secondAttribute="top" id="Sax-Mg-QCM"/>
+                            <constraint firstItem="YdR-SZ-UTV" firstAttribute="trailing" secondItem="pP6-P2-F1E" secondAttribute="trailing" id="Tiy-Gl-hoi"/>
                             <constraint firstItem="G1T-ne-6pC" firstAttribute="top" secondItem="RVZ-ZH-wAl" secondAttribute="top" constant="564" id="UAt-Zf-Ueh"/>
                             <constraint firstItem="G1T-ne-6pC" firstAttribute="centerX" secondItem="PsC-GW-g2d" secondAttribute="centerX" id="UEu-b7-Upj"/>
+                            <constraint firstItem="YdR-SZ-UTV" firstAttribute="top" secondItem="w51-m3-QBO" secondAttribute="bottom" constant="56" id="UYI-g4-rhj"/>
                             <constraint firstItem="arQ-nT-tKi" firstAttribute="top" secondItem="RVZ-ZH-wAl" secondAttribute="top" constant="45" id="WKT-uY-se0"/>
+                            <constraint firstItem="I6w-iw-OJU" firstAttribute="top" secondItem="NXl-ag-M2c" secondAttribute="bottom" constant="8" symbolic="YES" id="eex-Y8-hya"/>
+                            <constraint firstItem="YdR-SZ-UTV" firstAttribute="leading" secondItem="pP6-P2-F1E" secondAttribute="leading" id="f1b-FW-iwG"/>
                             <constraint firstItem="arQ-nT-tKi" firstAttribute="leading" secondItem="3ta-3B-BzH" secondAttribute="leadingMargin" id="fBd-PG-14c"/>
+                            <constraint firstItem="YdR-SZ-UTV" firstAttribute="leading" secondItem="w51-m3-QBO" secondAttribute="leading" id="faF-eA-NrF"/>
+                            <constraint firstItem="w51-m3-QBO" firstAttribute="leading" secondItem="arQ-nT-tKi" secondAttribute="leading" id="gT8-UP-nym"/>
+                            <constraint firstItem="pP6-P2-F1E" firstAttribute="leading" secondItem="NXl-ag-M2c" secondAttribute="leading" id="lry-NT-LWg"/>
                             <constraint firstItem="PsC-GW-g2d" firstAttribute="trailing" secondItem="RVZ-ZH-wAl" secondAttribute="trailing" id="n58-Hu-wjt"/>
+                            <constraint firstItem="NXl-ag-M2c" firstAttribute="trailing" secondItem="I6w-iw-OJU" secondAttribute="trailing" id="nWd-hy-aLD"/>
+                            <constraint firstItem="pP6-P2-F1E" firstAttribute="top" secondItem="YdR-SZ-UTV" secondAttribute="bottom" constant="8" symbolic="YES" id="qSL-n8-iMq"/>
+                            <constraint firstItem="NXl-ag-M2c" firstAttribute="top" secondItem="pP6-P2-F1E" secondAttribute="bottom" constant="8" symbolic="YES" id="zz2-r1-NNt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RVZ-ZH-wAl"/>
                     </view>
+                    <connections>
+                        <outlet property="answerAButton" destination="YdR-SZ-UTV" id="4To-DA-8lz"/>
+                        <outlet property="answerBButton" destination="pP6-P2-F1E" id="XsG-7h-B4r"/>
+                        <outlet property="answerCButton" destination="NXl-ag-M2c" id="Ypq-ta-cwC"/>
+                        <outlet property="answerDButton" destination="I6w-iw-OJU" id="2ax-1c-QV4"/>
+                        <outlet property="questionLabel" destination="w51-m3-QBO" id="wej-CI-QFJ"/>
+                        <outlet property="questionNumberLabel" destination="arQ-nT-tKi" id="D7S-DZ-nsr"/>
+                        <segue destination="bvD-aV-ic6" kind="show" identifier="questionToResult" id="my7-ck-6rN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2As-GH-cLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
