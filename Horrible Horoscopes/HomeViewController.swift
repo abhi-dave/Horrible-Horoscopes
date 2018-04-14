@@ -12,6 +12,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     @IBOutlet weak var zodiacCollectionView: UICollectionView!
     
+    var selection:String? = nil
+    
     let sign = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio",
                 "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
     
@@ -57,8 +59,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         selectedCell?.layer.borderColor = UIColor.red.cgColor
         selectedCell?.layer.borderWidth = 2
         
-        let selection = sign[indexPath.item]
-        print(selection)
+        selection = sign[indexPath.item]
+        print(selection!)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -66,5 +68,23 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         deselectedCell?.layer.borderColor = UIColor.white.cgColor
         deselectedCell?.layer.borderWidth = 0
     }
+    
+    @IBAction func nextPressed(_ sender: Any) {
+        if selection != nil {
+            performSegue(withIdentifier: "homeToQuestion", sender: self)
+        } else {
+            print("No Selection Made")
+        }
+    }
+    
+    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? QuestionViewController {
+            destination.zodiacSelection = selection
+        }
+    }
+    
 }
 

@@ -9,9 +9,11 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-    
+        
     //Integer that is used to advance questions
     var status = 0
+    
+    var zodiacSelection:String?
     
     //Multidimensional array to hold question number as well as the associated question
     let question = [
@@ -33,6 +35,8 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //print(zodiacSelection!)
     }
 
     override func didReceiveMemoryWarning() {
