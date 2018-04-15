@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var zodiacCollectionView: UICollectionView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     //String that handles checking for a zodiac selection
     var selection:String?
@@ -39,6 +40,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         zodiacCollectionView.dataSource = self
         zodiacCollectionView.delegate = self
+        
+        errorLabel.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,6 +68,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         selectedCell?.layer.borderColor = UIColor.red.cgColor
         selectedCell?.layer.borderWidth = 2
         
+        errorLabel.text = ""
         selection = sign[indexPath.item]
     }
     
@@ -78,10 +82,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //Makes sure that a zodiac sign is selected before advancing to the questionnaire
     @IBAction func nextPressed(_ sender: Any) {
         if selection != nil {
+            errorLabel.text = ""
             performSegue(withIdentifier: "homeToQuestion", sender: self)
         } else {
-            /*********Insert Selection Alert**********/
-            print("No Selection Made")
+            errorLabel.text = "Please select a sign to continue."
         }
     }
     

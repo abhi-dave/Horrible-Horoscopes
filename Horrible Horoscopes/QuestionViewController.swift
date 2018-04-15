@@ -18,6 +18,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerCButton: UIButton!
     @IBOutlet weak var answerDButton: UIButton!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    
     //Integer that is used to advance questions
     var status = 0
     
@@ -64,6 +66,9 @@ class QuestionViewController: UIViewController {
         answerBButton.setTitle(answer[0][2] as? String, for: .normal)
         answerCButton.setTitle(answer[0][3] as? String, for: .normal)
         answerDButton.setTitle(answer[0][4] as? String, for: .normal)
+        
+        //Set initial value of the error label to a blank string
+        errorLabel.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +108,7 @@ class QuestionViewController: UIViewController {
         buttonSelect(btn: answerAButton)
         buttonDeselect(btn1: answerBButton!, btn2: answerCButton!, btn3: answerDButton!)
         response = 1
+        errorLabel.text = ""
     }
     
     //Handles the action of clicking Answer B
@@ -110,6 +116,7 @@ class QuestionViewController: UIViewController {
         buttonSelect(btn: answerBButton)
         buttonDeselect(btn1: answerAButton!, btn2: answerCButton!, btn3: answerDButton!)
         response = 2
+        errorLabel.text = ""
     }
     
     //Handles the action of clicking Answer C
@@ -117,6 +124,7 @@ class QuestionViewController: UIViewController {
         buttonSelect(btn: answerCButton)
         buttonDeselect(btn1: answerAButton!, btn2: answerBButton!, btn3: answerDButton!)
         response = 3
+        errorLabel.text = ""
     }
     
     //Handles the action of clicking Answer D
@@ -124,6 +132,7 @@ class QuestionViewController: UIViewController {
         buttonSelect(btn: answerDButton)
         buttonDeselect(btn1: answerAButton!, btn2: answerBButton!, btn3: answerCButton!)
         response = 4
+        errorLabel.text = ""
     }
     
     @IBAction func nextPressed(_ sender: Any) {
@@ -187,8 +196,7 @@ class QuestionViewController: UIViewController {
                     break;
             }
         } else {
-            /*********Insert Selection Alert**********/
-            print("No Selection Made")
+            errorLabel.text = "Please select an answer to continue."
         }
     }
     

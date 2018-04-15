@@ -29,6 +29,19 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gbp-jg-mKi">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJ9-8X-bod">
+                                            <rect key="frame" x="8" y="531" width="359" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.058155415096606489" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lJ9-8X-bod" firstAttribute="trailing" secondItem="gbp-jg-mKi" secondAttribute="trailingMargin" id="J7r-P5-7QF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lJ9-8X-bod" secondAttribute="bottom" constant="90" id="UVm-K1-dO1"/>
+                                        <constraint firstItem="lJ9-8X-bod" firstAttribute="leading" secondItem="gbp-jg-mKi" secondAttribute="leadingMargin" id="zHD-J1-DWX"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -145,6 +158,7 @@
                         <viewLayoutGuide key="safeArea" id="IWX-0s-Mvu"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="lJ9-8X-bod" id="W74-D5-wic"/>
                         <outlet property="zodiacCollectionView" destination="IgJ-uW-e83" id="JDM-fp-lme"/>
                         <segue destination="f1f-Vj-yEi" kind="show" identifier="homeToQuestion" id="ZEo-K3-bkB"/>
                     </connections>
@@ -170,6 +184,19 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xim-rx-8NE">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF8-Be-ga7">
+                                            <rect key="frame" x="8" y="531" width="359" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.058155415096606489" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZF8-Be-ga7" firstAttribute="leading" secondItem="Xim-rx-8NE" secondAttribute="leadingMargin" id="Ftn-Ct-bAC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ZF8-Be-ga7" secondAttribute="bottom" constant="90" id="Lky-ET-8Lj"/>
+                                        <constraint firstItem="ZF8-Be-ga7" firstAttribute="trailing" secondItem="Xim-rx-8NE" secondAttribute="trailingMargin" id="vTi-Cz-cun"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -297,6 +324,7 @@
                         <outlet property="answerBButton" destination="pP6-P2-F1E" id="XsG-7h-B4r"/>
                         <outlet property="answerCButton" destination="NXl-ag-M2c" id="Ypq-ta-cwC"/>
                         <outlet property="answerDButton" destination="I6w-iw-OJU" id="3ll-Li-Sa0"/>
+                        <outlet property="errorLabel" destination="ZF8-Be-ga7" id="Vnf-mv-AfJ"/>
                         <outlet property="questionLabel" destination="w51-m3-QBO" id="wej-CI-QFJ"/>
                         <outlet property="questionNumberLabel" destination="arQ-nT-tKi" id="D7S-DZ-nsr"/>
                         <segue destination="bvD-aV-ic6" kind="show" identifier="questionToResult" id="my7-ck-6rN"/>
