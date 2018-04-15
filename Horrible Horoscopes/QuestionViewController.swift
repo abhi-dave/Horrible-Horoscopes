@@ -200,7 +200,7 @@ class QuestionViewController: UIViewController {
         }
     }
     
-    //Sends the initial zodiac sign selection and answer selecctions to the result view controller
+    //Sends the initial zodiac sign selection and answer selections to the result view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ResultViewController {
             destination.zodiacSelection = zodiacSelection

@@ -85,6 +85,7 @@ class HelpViewController: UIViewController {
         let day:Int = Int(getDay)!
         let month:Int = Int(getMonth)!
         
+        //First checks the birthday my month and then checks by day to determine the zodiac sign
         switch(month) {
             case 1:
                 if day >= 1 && day <= 19 {

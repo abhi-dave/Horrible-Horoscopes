@@ -13,11 +13,14 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var signImageView: UIImageView!
     @IBOutlet weak var signLabel: UILabel!
     @IBOutlet weak var horoscopeLabel: UILabel!
-    @IBOutlet weak var testingLabel: UILabel! //DELETE THIS
+    
+    //FOR TESTING ONLY vvvvv
+    @IBOutlet weak var testingLabel: UILabel!
     
     //Holds value of initial zodiac selection
     var zodiacSelection:String?
     
+    //Default values of user responses that will be updated with information from the previous scene
     var responses = [
         [1, 0],
         [2, 0],
@@ -29,6 +32,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Gets the user associated zodiac sign image and name for display
         signImageView.image = UIImage(named: zodiacSelection!.lowercased())
         signLabel.text = zodiacSelection
         

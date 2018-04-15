@@ -41,6 +41,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         zodiacCollectionView.dataSource = self
         zodiacCollectionView.delegate = self
         
+        //Set initial value of the error label to a blank string
         errorLabel.text = ""
     }
 
