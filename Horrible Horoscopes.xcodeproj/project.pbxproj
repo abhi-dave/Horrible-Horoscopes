@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1356DB1220831D5E0027AA5D /* ZodiacSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1356DB1120831D5E0027AA5D /* ZodiacSign.swift */; };
 		240C4E63207F0C54007E282A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C4E62207F0C54007E282A /* HelpViewController.swift */; };
 		24E1A5C02081238D00E3F4B0 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1A5BF2081238D00E3F4B0 /* QuestionViewController.swift */; };
 		24E1A5C22081246700E3F4B0 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1A5C12081246700E3F4B0 /* ResultViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1356DB1120831D5E0027AA5D /* ZodiacSign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZodiacSign.swift; sourceTree = "<group>"; };
 		240C4E62207F0C54007E282A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		24E1A5BF2081238D00E3F4B0 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		24E1A5C12081246700E3F4B0 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1356DB0D20831D1D0027AA5D /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				1356DB1020831D310027AA5D /* Controller */,
+				1356DB0F20831D2C0027AA5D /* View */,
+				1356DB0E20831D270027AA5D /* Model */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		1356DB0E20831D270027AA5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1356DB1120831D5E0027AA5D /* ZodiacSign.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1356DB0F20831D2C0027AA5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24EAA9BD207E3DA6000115F8 /* CollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1356DB1020831D310027AA5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24E1A5BF2081238D00E3F4B0 /* QuestionViewController.swift */,
+				240C4E62207F0C54007E282A /* HelpViewController.swift */,
+				24E1A5C12081246700E3F4B0 /* ResultViewController.swift */,
+				24EAA9AD207E3909000115F8 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		24EAA99F207E3909000115F8 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +101,12 @@
 		24EAA9AA207E3909000115F8 /* Horrible Horoscopes */ = {
 			isa = PBXGroup;
 			children = (
+				1356DB0D20831D1D0027AA5D /* MVC */,
 				24EAA9AB207E3909000115F8 /* AppDelegate.swift */,
-				24EAA9AD207E3909000115F8 /* HomeViewController.swift */,
 				24EAA9AF207E3909000115F8 /* Main.storyboard */,
-				24E1A5C12081246700E3F4B0 /* ResultViewController.swift */,
-				24EAA9BD207E3DA6000115F8 /* CollectionViewCell.swift */,
 				24EAA9B2207E3909000115F8 /* Assets.xcassets */,
 				24EAA9B4207E3909000115F8 /* LaunchScreen.storyboard */,
 				24EAA9B7207E3909000115F8 /* Info.plist */,
-				240C4E62207F0C54007E282A /* HelpViewController.swift */,
-				24E1A5BF2081238D00E3F4B0 /* QuestionViewController.swift */,
 			);
 			path = "Horrible Horoscopes";
 			sourceTree = "<group>";
@@ -151,6 +186,7 @@
 				24EAA9AE207E3909000115F8 /* HomeViewController.swift in Sources */,
 				24E1A5C02081238D00E3F4B0 /* QuestionViewController.swift in Sources */,
 				24EAA9AC207E3909000115F8 /* AppDelegate.swift in Sources */,
+				1356DB1220831D5E0027AA5D /* ZodiacSign.swift in Sources */,
 				24EAA9BE207E3DA6000115F8 /* CollectionViewCell.swift in Sources */,
 				240C4E63207F0C54007E282A /* HelpViewController.swift in Sources */,
 				24E1A5C22081246700E3F4B0 /* ResultViewController.swift in Sources */,

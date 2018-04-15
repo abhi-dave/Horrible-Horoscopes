@@ -11,4 +11,13 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var signImageView: UIImageView!
     @IBOutlet weak var signLabel: UILabel!
+    
+    
+    var zodiacSign: ZodiacSign! {
+        didSet{
+            self.signLabel.text = zodiacSign.name
+            self.signImageView.image = zodiacSign.sign
+        }
+    }
+
 }

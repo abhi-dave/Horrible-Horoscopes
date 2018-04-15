@@ -15,29 +15,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     //String that handles checking for a zodiac selection
     var selection:String?
-    
-    //Array that holds the names of the zodiac signs
-    let sign = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"]
-    
-    //Array that holds the images of the zodiac signs
-    let signImage: [UIImage] = [
-        UIImage(named: "aries")!,
-        UIImage(named: "taurus")!,
-        UIImage(named: "gemini")!,
-        UIImage(named: "cancer")!,
-        UIImage(named: "leo")!,
-        UIImage(named: "virgo")!,
-        UIImage(named: "libra")!,
-        UIImage(named: "scorpio")!,
-        UIImage(named: "sagittarius")!,
-        UIImage(named: "capricorn")!,
-        UIImage(named: "aquarius")!,
-        UIImage(named: "pisces")!
-    ]
-    
+    var arrZodiac: [ZodiacSign] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        arrZodiac = ZodiacSign.horoscopeData()
         zodiacCollectionView.dataSource = self
         zodiacCollectionView.delegate = self
         
@@ -51,14 +33,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     //Gets the amount of cells to display in the collection view
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sign.count
+        return arrZodiac.count
     }
     
     //Displays the sign label and sign image for each cell counted in the previous method
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
-        cell.signLabel.text = sign[indexPath.item]
-        cell.signImageView.image = signImage[indexPath.item]
+        cell.zodiacSign = arrZodiac[indexPath.row]
         
         return cell
     }
@@ -70,7 +51,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         selectedCell?.layer.borderWidth = 2
         
         errorLabel.text = ""
-        selection = sign[indexPath.item]
+        selection = arrZodiac[indexPath.row].name
     }
     
     //Handles the deselection of an item within the zodiac sign collection view
